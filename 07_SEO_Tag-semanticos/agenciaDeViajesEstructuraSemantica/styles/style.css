@@ -1,0 +1,39 @@
+*{
+    padding: 0; 
+    margin: 0;
+}
+
+/* recomendacion para identificar donde estamos trabajando es ponerle al contenedor la propiedad border, luego se lo quita*/
+/* propiedades para que el nav quede fijo cuando scrolleas */
+#header{
+    /* border: 1px solid orange; */
+    background-color: orange;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#header > h1{
+    display: inline;
+    margin-left: 20px;
+} 
+
+header > img{
+    margin-top: 10px;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+nav{
+    display: inline;
+    margin-left: 200px;
+}
+
+.container-nav > ul{
+    display: inline;
+}
+
+.navItem{
+    display: inline;
+    margin-left: 15px;
+}

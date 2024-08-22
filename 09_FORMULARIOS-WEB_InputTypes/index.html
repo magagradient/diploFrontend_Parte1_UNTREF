@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- CDN: -->
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <!-- You should properly set the path from the main file. -->
+
+    <!-- el link a css siempre va abajo de los CDN porque si no los va a sobreescribir -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contactanos</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus officia cupiditate nesciunt id magnam
+            illo
+            perspiciatis culpa, vel corrupti eligendi?</p>
+    </header>
+
+
+    <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+
+
+    <main class="container">
+        <section class="row">
+            <!-- <form class="column column-100" action="#" method="post"> -->
+            <form class="column column-100">
+                <!-- nombre de la persona -->
+                <!-- <label for="nombre">Nombre</label> -->
+                <input type="text" name="nombre" placeholder="Nombre" maxlength="20" minlength="6" required>
+
+                <!-- email de la persona -->
+                <!-- <label for="email">Email</label> -->
+                <input type="email" name="email" placeholder="Email" required>
+
+                <!-- contraseña -->
+                <!-- una letra en mayuscula, otra en minuscula y un numero -->
+                <!-- atributo maxlength para limitar el total de caracteres que podra ingresar el usuario -->
+                <!-- atributo minlength para limitar una longitud minima -->
+                <input type="password" name="contraseña" placeholder="contraseña" maxlength="10" minlength="8" required
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+
+                <!-- validaciones y restricciones: para establecer restricciones especificas sobre algunos tipos de datos a ingresar, contamos con el atributo pattern. Ete permite ingresar una estrucctura que limita aun mas el tipo de dato a ingresar, basandose en expresiones regulares: RegExp, estas nos ayudan a definir, por ejemplo, que una contraseña deba cumplir con el ingreso de mayusculas, minusculas, caracteres especiales y numeros, ademas de un minimo y/o maximo de caracteres -->
+                <!-- https://www.html5pattern.com/ -->
+
+                <!-- Numero de telefono -->
+                <!-- <input type="number" name="telefono" placeholder="Numero de telefono"> -->
+                <input type="tel" name="telefono" placeholder="Numero de telefono" required>
+
+                <!-- validaciones y retricciones: el atributo required, soportado por las mayoria de los <input> nos facilita establecer un mecanismo de obligatoriedad de ingreso de datos en uno o mas campos del formulario. Ademas, es un atributo de tipo booleano, por lo cual, solo basta agregarloa los input type que necesitamos para que sea obligatoria su completitud -->
+
+                <!-- fecha -->
+                <!-- <label for="fechaNacimiento">Fecha de nacimiento</label> -->
+                <input type="date" name="fechaNacimiento" placeholder="Fecha de Nacimiento">
+
+                <!-- atributos min y max para configurar los valores minimos y maximos de los datos que pueden ingresarse en ellos  -->
+                <input type="number" placeholder="¿cuantos años estudiaste?" min="7" max="20">
+
+                <!-- el tag textarea nos permie definir un campo de comentarios. Cuenta con el atributo placeholder y el maxlength para limirar la cantidad de caracteres, ademas de configurar su ancho y alto a través de los atributo cols y rows, respectivamente -->
+                <textarea name="comentarios" cols="30" rows="10"></textarea>
+
+                <!-- Inut Types: existen tambien otros camino mas avanzados para especificar el mensaje o notificacion al usuario en base a los datos esperados en <input type> que esperan un patron especifico, pero esto lo logramos combinando CSS y JavaScript para tener asi un control mas estricto -->
+                <!-- el real uso conviene hacerlo con css y javascript -->
+
+                <!-- Hora -->
+                <input type="time">
+
+                <input type="button">
+                <input type="checkbox">
+                <input type="color">
+                <input type="date">
+                <input type="datetime-local">
+                <input type="email">
+                <input type="file">
+                <input type="hidden">
+                <input type="image">
+                <input type="month">
+                <input type="number">
+                <input type="password">
+                <input type="radio">
+                <input type="range">
+                <input type="reset">
+                <input type="search">
+                <input type="submit">
+                <input type="tel">
+                <input type="text">
+                <input type="time">
+                <input type="url">
+                <input type="week">
+
+                <!-- darle medida fija con css porque si no el usuario puede modificarlo -->
+                <textarea name="consulta" id="" cols="30" rows="10" placeholder="dejanos tu consulta"></textarea>
+                <!-- botones del formulario -->
+                <input type="submit" value="enviar consulta">
+
+                <!-- otros input types: <input type="radio"> permite establecer una casilla de seleccion simple entre multiples opciones: Debemos especificar es su atributo name, el mismo nombre para todos los elementos, asi podemos seleccionar uno solo de ellos. Si no, el comportamiento sera de seleccion multiple -->               
+                <input type="radio" name="tiempoprogramado">
+                <input type="radio" name="tiempoprogramado">
+                <input type="radio" name="tiempoprogramado">
+
+                <!-- <input type="checkbox"> permite establecer una casilla de verificacion del ipo check. Si queremos predeterminar como tildada alguna de las casillas, simplemente agregamos el atributo booleano: checked -->
+                <input type="checkbox" name="html5">
+                <input type="checkbox" name="css">
+                <input type="checkbox" name="js">
+
+                <!-- <input type="color"> despliega una paleta de seleccion de colores. En su atributo value almacena el color seleccionado en fotmato RGB mientras que en el cuerpo del elemento HTML tendremos la vista previa del color seleccionado -->
+                <input type="color" name="color">
+
+            <!-- <input type="file"> permite seleccionar un archivo a adjuntar en el formulario de datos. En su atributo accept nos ayuda a definir algun o algunos formatos de archivos especificos. Su atributo multipe, booleano, permite seleccionar mas de un archivo a adjuntar -->
+            <input type="file" accept="image/png, image/jpeg">
+
+        </section>
+        </form>
+    </main>
+
+</body>
+
+</html>

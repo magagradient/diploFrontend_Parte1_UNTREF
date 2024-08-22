@@ -1,0 +1,120 @@
+/* 3 Formas de referencias a estilos aplicables en un documento HTML: etiqueta (el nombre de cada etiqueta HTML) class (el ATRIBUTO class de cada elemnto html) id (el ATRIBUTO id de cada elemento HTML) */
+
+/* a diferencia de las clases el id no se puede repetir en otros elementos como hicimos con la etiqueta p que repetimos la clase parrafo varias veces:es unico y no se puede usar mas de una vez */
+
+/* * es el selector universal, quiere decir que todo lo que pongamos dentro de las llaves va a afectar a todos los elementos, va a afectar todo lo que tengamos dentro del body, incluyendolo. */
+
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    color: beige;
+}
+
+/* para agregar tipografia que me descargue */
+
+/* @font-face {
+    font-family: 'tipografiaLocal';
+    src: url();
+    y en la url buscar la tipografia en el proyecto
+} */
+
+/* tercera forma de agregar tipografia con el import */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,200&family=Poppins:ital,wght@0,100;1,100&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap') */
+
+
+
+body {
+    /* formato rgb */
+    background-color: rgb(125, 1, 1);
+    /* primer n° el nivel del rojo, 2° verde, 3° azul */
+}
+
+/* body {
+    formato rgba
+    background-color: rgba(125, 1, 1, 0.5);
+    primer n° el nivel del rojo, 2° verde, 3° azul y 4° el nivel de opacidad que queremos que tenga el color
+} */
+
+/* poner el color por el nombre (predefinido)no es lo recomedable, queda poco profesional */
+h1 {
+    /* formato predefinido */
+    color: whitesmoke;
+    /* font-family: 'tipografiaLocal'; */
+    
+    
+    /* con el import */
+    /* font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal; */
+}
+
+h3 {
+    /* formato hexadecimal */
+    color: #b0b0b0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+}
+
+p {
+    /*  formato hsl */
+    /* color: hsl(hue, saturation, lightness); matiz, saturacion, luminosidad*/
+    color: hsl(0, 0%, 83%);
+}
+
+/* las clases de identifican con un . antes del nombre de la clase */
+.parrafo {
+    color: #97f8ff;
+}
+
+/* los id se identifican con un # antes del nombre del id */
+#tituloPrincipal {
+    background-color: #b0b0b0;
+}
+
+/* tambien se puede definir una propiedad en comun en varios tags HTML, ej: */
+
+/* h1 h2 h3 {
+    font-size: larger;
+} */
+
+/* Selector Specificity: (1, 0, 0) apoyando el mouse sobre la etiqueta, id o class te informa el valor de cual etiqueta es mas especifica */
+
+/* declaracion !important; para que si o si no cambie el valor mas alla de la posicion en la que se encuentre en el css, no es recomendable hacerlo, ponerlo mas de tres veces se considera mala practica */
+
+/* concepto de herencia */
+/* todos los elementos HTML que estan dentro de la etiqueta tr heredan el mismo estilo */
+tr {
+    background-color: #b0b0b0;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+/* selectores en CSS */
+/*  por ej se pueden seleccionar todas las etiquetas p que esten dentro de un div */
+
+/* div p {
+    background-color: #3a3a3a;
+} */
+
+div>p {
+    background-color: #3d3d3d;
+}
+
+/* selector de hermanos adyacentes */
+
+/* div + p {
+    background-color: #3d3d3d;
+} */
+
+/* selector de hermanos generales */
+
+/* div ~ p {
+    background-color: #3d3d3d;
+} */

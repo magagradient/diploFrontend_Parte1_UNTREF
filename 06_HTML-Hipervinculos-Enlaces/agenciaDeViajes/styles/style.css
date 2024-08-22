@@ -1,0 +1,17 @@
+*{
+    padding: 0; 
+    margin: 0;
+}
+/* padding es el relleno, margin es el margen y tambien esta el border (borde) del padding */ 
+
+.navItem {
+    display: inline;
+    margin: 15px;
+}
+/* display hace que un elemento sea en bloque o en linea */
+/* margin para espaciar a los items del nav */
+
+.navItem > a {
+    text-decoration: none;
+    color: blueviolet;
+}

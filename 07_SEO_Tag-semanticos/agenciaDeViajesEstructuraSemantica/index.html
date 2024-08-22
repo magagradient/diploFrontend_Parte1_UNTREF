@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Agencia de viajes</title>
+</head>
+
+<body>
+    <header id="header">
+        <img src="./multimedia/logo.jpg" alt="agencia de viaje srtt" width="100px"/>
+        <h1>Agencia de viaje SRTT</h1>
+
+        <!-- (li>a)*3 y te crea la cantidad de items que le indicas con la etiqueta a -->
+        <!-- si no queres enlazar el home en el mismo home se le puede poner un # ejemplo: <li><a href="#"></a>Home</li> porque no necesitas que se te enlace hacia otra pagina -->
+        <nav class="container-nav">
+            <ul>
+                <li class="navItem"><a href="./index.html"></a>Home</li>
+                <li class="navItem"><a href="./pages/paquetes.html"></a>Paquetes</li> 
+                <li class="navItem"><a href=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- el main se utiliza solo una vez por documento html y no puede ser descendiente ni contenida dentro de otros tag como article,aside,footer,header o nav-->
+    <main>
+        <h2>Nuestros paquetes</h2>
+        <section>
+            <a href="./pages/viajesBaratos.html"> Viajes Baratos</a>
+            <a href="./pages/ofertas.html"> Ofertas</a>
+        </section>
+
+        <section id="contenedor-tarjetas">
+            <div>
+                <h2>Mendoza</h2>
+                <img src="./multimedia/image/mendoza.jpg" alt="ciudad de mendoza" width="200" height="200" />
+                <a href="">Ver mas</a>
+            </div>
+
+            <div>
+                <h2>Neuquen</h2>
+                <img src="./multimedia/image/neuquen.jpg" alt="ciudad de neuquen" width="200" height="200" />
+                <a href="">Ver mas</a>
+            </div>
+
+            <div>
+                <h2>Ramallo</h2>
+                <img src="./multimedia/image/ramallo.jpg" alt="ciudad de ramallo" width="200" height="200" />
+                <a href="">Ver mas</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div id="mediosDePagos">
+            <h3>Medios de pago</h3>
+            <ul>
+                <li>Transferencias</li>
+                <li>Efectivo</li>
+                <li>Criptomonedas</li>
+            </ul>
+        </div>
+
+        <div id="legales">
+            <h3>Legales</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aliquid libero sit, reiciendis
+                inventore
+                nostrum.</p>
+        </div>
+
+        <div id="contacto">
+            <h3>Contacto</h3>
+            <ul>
+                <li>
+                    <a href="mailto:agenciadeviaje@gmail.com">Mail</a>
+                </li>
+                <li>
+                    <a href="http://wa.me/1156698523">WatsApp</a>
+                </li>
+                <li>
+                    <a href="http://instagram.com">Instagram</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

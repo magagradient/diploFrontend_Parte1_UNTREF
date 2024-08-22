@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASE 04</title>
+</head>
+<body>
+    <!-- los tags HTML son denominados ELEMENTOS -->
+    <!-- cada documento HTML se compone de un arbol de nodos HTML simple que se dividen en dos -nodos de texto -elementos HTML (tags) -->
+    <!-- cada tag es analizado y representado graficamente -->
+
+    <p>HTML, siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web. </p>
+
+    <!-- ALT + Z para que se acomode la linea cuando se nos extiende mucho -->
+    <!-- Ctrl + } para comentar -->
+
+    <!-- tag para imagen (<img>) -->
+    <!-- imagen con ruta relativa -->
+    <img src="./multimedia/img/avril-lavigne.jpg" width="300" height="300" alt="cantante avril lavigne">
+    <!-- de la siguiente forma no es recomendable -->
+    <img src="multimedia/img/avril-lavigne.jpg" width="300" height="300"   alt="cantante avril lavigne">
+    
+    <!-- imagen con ruta absoluta -->
+    <img src="https://i.scdn.co/image/ab67616d0000b2736b865a495fe2770aa566e177" width="300" height="300" alt="album banda indie warpaint">
+
+    <!-- utilizar el atributo ALT siempre es obligatorio para nosotros, se concidera buena practica -->
+    <!-- reconoce por defecto las medidas en pixeles (solo en HTML, en css NO pasa) -->
+    <!-- ATRIBUTO src nos sirve para indicarle la ruta donde se encuenta la imagen que queremos poner-->
+    <!-- los nombre de los archivos(fotos,videos,audios,etc) no tienen que tener espacio -->
+
+    <!-- si o si nuestro primer archivo HTML debe llevar el nombre de index.html y tambien si o si tiene que estar en la raiz de nuestro proyecto -->
+
+    <!-- el SEO es lo que nos ayuda a nosotros al posicionamiento de la pagina, el seo son las buenas practicas que hacemos en el codigo -->
+
+    <!-- formato de imagen WebP es la que se recomienda usar hoy en dia -->
+
+    <!-- tag <FIGURE> y <FIGCAPTION> para que el texto vaya junto con la imagen, al ser contenedora a diferencia del tag img este tag en vez de ser en linea es en bloque -->
+
+    <!--  La etiqueta <figure> se utiliza comúnmente para envolver elementos como imágenes, gráficos, diagramas, videos, entre otros, junto con su correspondiente descripción o leyenda utilizando la etiqueta <figcaption>. -->
+    <figure>
+        <img src="https://i.scdn.co/image/ab67616d0000b2736b865a495fe2770aa566e177" width="300" height="300"   alt="album banda indie warpaint">
+        <figcaption>Album de banda indie de EE.UU Warpaint</figcaption>
+    </figure>
+
+    <!-- tag <audio> -->
+    <!-- atributo controls obligatorio para que se vea los controles del reproductor y atributo muted para que inicialice muteado -->
+    <!-- atributo autoplay (a veces funciona y a veces no) -->
+    <!-- los atributos se colocan uno a lado del otro y no requieren un orden especifico -->
+    <audio src="./multimedia/audio/BH_Wildflower.mp3" controls muted ></audio>
+
+    <!-- tag <source> dentro del tag <audio> se utiliza para poner diferentes tipos formatos de un mismo audio para que el navegador eliga cual le conviene usar en el momento de la exploracion del usuario, para agilizar el tiempo de carga de la pagina -->
+
+    <!-- <audio controls>
+        <source src="./multimedia/audio/BH_Wildflower.ogg" type="">
+        <source src="./multimedia/audio/BH_Wildflower.wav" type="">
+        <source src="./multimedia/audio/BH_Wildflower.mp3" type="">
+    </audio>     -->
+    
+    <!-- error 404 salta cuando no se encuentra un recurso -->
+
+    <!-- audio streaming -->
+
+    <!-- tag <video> -->
+    <video src="./multimedia/video/beachHouse.mp4" controls muted autoplay width="540" height="960" ></video>
+    <!-- ahora es regla que el video este muteado para el autoplay -->
+    <!-- la etiqueta <source> tambien se aplica para los videos y dar la posibilidad al navegador que elija el que le conviene para una mejor navegabilidad -->
+
+    <!-- tag <track> para captioning y subtitulos. -->
+
+    <!-- tag <iframe> nos permite incorporar contenido de otra web -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3xZALSxaLVM?si=askVo0hVJw_Qzoxv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4OAw28fhAji40wFg0DURWe?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761022.9033912718!2d-88.39120510495711!3d41.83377338289123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20Illinois%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1707858607068!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- iframe sin que la pagina te tire el codigo para compartir directamente copiando la url que queramos -->
+    <iframe src="http://www.beachhousebaltimore.com/" width="500" height="500" frameborder="0"></iframe>
+
+    <!-- tablas HTML tag <table> <thead> <tr> <td> <th> <tbody> -->
+    <table>
+        <thead>
+            <tr>
+            <th>clase</th>
+            <th>tema</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>00</td>
+                <td>introduccion</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>prototipado</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>HTML 1</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>HTML 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- shift + alt + flecha para abajo o arriba y duplica lo seleccionado -->
+
+    <!-- ./multimedia -- para ir para atras en carpetas se le agrega un otro punto ../ para ir mas atras otro punto .../ , etc. -->
+
+</body>
+</html>

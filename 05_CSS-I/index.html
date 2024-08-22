@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASE 05</title>
+    <!-- link del icono de la pagina -->
+    <link rel="shortcut icon" href="./multimedia/img/comp.png" type="image/x-icon">
+    <!-- linkeo de tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,200&family=Poppins:ital,wght@0,100;1,100&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- link de css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 3 Formas de referencias a estilos aplicables en un documento HTML: etiqueta (el nombre de cada etiqueta HTML) class (el ATRIBUTO class de cada elemnto html) id (el ATRIBUTO id de cada elemento HTML) -->
+
+    <!-- a diferencia de las clases el id no se puede repetir en otros elementos como hicimos con la etiqueta p que repetimos la clase parrafo varias veces: es unico y no se puede usar mas de una vez -->
+
+    <!-- los nombres de las clases y id si hay mas de dos palabras no deben estar separadas porque lo interpreta como otro atributo el modelo de esctriura utilizada se llama camelCase que se separa la letra con una mayuscula. ej: tituloPrincipal -->
+
+    <!-- se puede agregar mas de una clase -->
+
+    <h3>Etiqueta h</h3>
+    <p class="parrafo negrita">Categoria: en bloque</p>
+    <h1 id="tituloPrincipal">Aprendiendo CSS I</h1>
+
+    <p>HTML, siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web. </p>
+
+    <h3>Etiqueta img</h3>
+    <p class="parrafo negrita">Categoria: en linea</p>
+
+    <img src="./multimedia/img/avril-lavigne.jpg" width="300" height="300" alt="cantante avril lavigne">
+
+    <img src="multimedia/img/avril-lavigne.jpg" width="300" height="300"   alt="cantante avril lavigne">
+    
+
+    <img src="https://i.scdn.co/image/ab67616d0000b2736b865a495fe2770aa566e177" width="300" height="300" alt="album banda indie warpaint">
+
+    <h3>Etiqueta figure</h3>
+    <p class="parrafo negrita">Categoria: en linea</p>
+    <figure>
+        <img src="https://i.scdn.co/image/ab67616d0000b2736b865a495fe2770aa566e177" width="300" height="300"   alt="album banda indie warpaint">
+        <figcaption>Album de banda indie de EE.UU Warpaint</figcaption>
+    </figure>
+
+    <h3>Etiqueta audio</h3>
+    <p class="parrafo negrita">Categoria: en linea</p>
+    <audio src="./multimedia/audio/BH_Wildflower.mp3" controls muted ></audio>
+
+    <h3>Etiqueta video</h3>
+    <p class="parrafo negrita" >Categoria: en linea</p>
+    <video src="./multimedia/video/beachHouse.mp4" controls muted autoplay width="540" height="960" ></video>
+
+
+    <h3>Etiqueta iframe</h3>
+    <p class="parrafo negrita">Categoria: en linea</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3xZALSxaLVM?si=askVo0hVJw_Qzoxv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4OAw28fhAji40wFg0DURWe?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761022.9033912718!2d-88.39120510495711!3d41.83377338289123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20Illinois%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1707858607068!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <iframe src="http://www.beachhousebaltimore.com/" width="500" height="500" frameborder="0"></iframe>
+
+    <h3>Etiqueta table</h3>
+    <p class="parrafo negrita">Categoria: en bloque</p>
+    <table>
+        <thead>
+            <tr>
+            <th>clase</th>
+            <th>tema</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>00</td>
+                <td>introduccion</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>prototipado</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>HTML 1</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>HTML 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Etiqueta div</h3>
+    <p class="parrafo negrita">Categoria: en bloque</p>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam fugit culpa ut, enim aperiam vitae.</p>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laborum illum nemo natus iste pariatur. Non ducimus molestiae voluptas commodi vel nihil? Totam cum iusto quis temporibus consequuntur? Molestias, amet.</p>
+        </section>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate in autem, quia illo laudantium dolorem hic, neque, dolores libero ea debitis eius!</p>
+    </div>
+
+</body>
+</html>
