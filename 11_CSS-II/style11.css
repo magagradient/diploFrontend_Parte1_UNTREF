@@ -1,0 +1,75 @@
+/* UNIDADES DE MEDIDAS: ABSOLUTAS Y RELATIVAS */
+
+/* MEDIDAS ABSOLUTAS: son las que utilizamos a diario y las que no dependen de un valor de referencia. Entre ellas podemos mencionar al pixel, centimetro, metro, etc. Se las conoce tambien como medidas fijas y no varian segun el dispositivo. */
+
+/* Las principales unidades absolutas en CSS son:
+
+Píxel (px): Es la unidad más utilizada y recomendada para principiantes.
+Puntos (pt): Equivale aproximadamente a 96px / 72 ≈ 1.33px.
+Pulgadas (in): Equivale a 96px.
+Centímetros (cm): Equivale aproximadamente a 96px / 2.54 ≈ 37.79px.
+Picas (pc): Equivale aproximadamente a 96px / 6 ≈ 16px.
+Milímetros (mm): Equivale aproximadamente a 96px / 25.4 ≈ 3.78px.
+Cuarto de mm (Q): Equivale aproximadamente a 96px / 6.35 ≈ 15.12px.
+
+Las unidades absolutas como el px son ideales para principiantes y entender CSS básico 4.
+Sin embargo, para desarrollo web moderno y responsivo, es recomendable aprender unidades relativas o de viewport.
+La unidad px no cambia al modificar el tamaño de la ventana del navegador. */
+
+/* MEDIDAS RELATIVAS: se calculan en base a otra unidad de medidad definida. Un ejemplo seria el uso de em y rem. Estas medidas son mas apropiadas para arealizar ajustes en diferentes dispositivos, manteniendo un layout consistente */
+
+/* Principales unidades relativas
+
+EM (em):
+Dependiente del tamaño de fuente del elemento padre.
+Útil para crear diseños escalables sin necesidad de media queries.
+
+REM (rem):
+Dependiente del tamaño de fuente del elemento raíz (HTML).
+Ideal para crear diseños responsivos consistentes en toda la página.
+
+VW (viewport width):
+Relativo al ancho del viewport.
+Útil para crear layouts responsivos basados en el ancho de la pantalla.
+
+VH (viewport height):
+Relativa a la altura del viewport.
+Útil para crear layouts responsivos basados en la altura de la pantalla.
+
+Características del porcentaje (%)
+Relatividad:
+El porcentaje es relativo a la medida del elemento contenedor o a la propiedad que está modificando.
+No es relativo al tamaño de la fuente, sino al tamaño del elemento o propiedad específica.
+Uso común:
+Se utiliza comúnmente para definir anchuras y alturas de elementos.
+También se usa para definir tamaños de fuente.
+Cálculo:
+Para calcular el valor en píxeles, se divide el valor por 100 y luego se multiplica por la medida del contenedor o propiedad base.
+
+vmin (Viewport Minimum)
+vmin representa la menor dimensión del viewport.
+Características:
+Equivalente al 1% de la menor dimensión del viewport (ancho o alto).
+Cambia dinámicamente según el tamaño del viewport.
+Uso común:
+Para asegurar que un elemento no exceda la menor dimensión del dispositivo.
+Útil para crear layouts responsivos que se ajusten a cualquier tamaño de pantalla.
+
+vmax (Viewport Maximum)
+vmax representa la mayor dimensión del viewport.
+Características:
+Equivalente al 1% de la mayor dimensión del viewport (ancho o alto).
+Cambia dinámicamente según el tamaño del viewport 2.
+Uso común:
+Para asegurar que un elemento ocupe el máximo posible dentro del viewport.
+Útil para crear efectos visuales que se ajusten al tamaño del dispositivo.
+
+Ventajas de las medidas relativas:
+Facilitan el diseño responsivo sin necesidad de muchas media queries.
+Permiten crear diseños escalables y consistentes en diferentes dispositivos.
+Son más flexibles que las medidas absolutas (como px) para diseño responsivo. */
+
+/* https://www.convertir-unidades.info/ */
+
+/* deje en minuto 17 de la clase */
+

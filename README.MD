@@ -157,3 +157,36 @@
   7. Crear nuestro primer repositorio
   8. readme.md
   9. .gitignore
+   
+
+## **CLASE 11: CSS II.**
+
+- **Unidades de medidas relativas y absolutas.**
+- **Propiedades de texto:**
+  1. text-align
+  2. text-decoration
+  3. text-transform
+  4. text-indent
+  5. letter-spacing
+  6. line-height
+  7. word-spacing
+  8. text-shadow
+  9. writing-mode
+- **Propiedades para lista:**
+  1. list-style
+  2. list-style-type
+  3. list-style-position
+- **Medidas en css:**
+  1. propiedad width
+  2. propiedad height
+- **Propiedades background:**
+  1. background-color
+  2. background-image
+  3. background-repeat
+  4. background-size
+  5. background-position
+  6. background-atachment
+  7. gradientes
+- **Propiedades opacity**
+- **Propiedades filter**
+  
