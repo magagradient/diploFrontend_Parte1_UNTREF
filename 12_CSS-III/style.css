@@ -1,0 +1,103 @@
+.box {
+    border: 1px solid red;
+    width: 230px;
+    height: 230px;
+}
+
+/* //////////////////////////////////// */
+/* OVERFLOW */
+
+/* visible: Es el valor por defecto. El contenido 
+que desborda el contenedor se muestra 
+fuera del límite del contenedor.
+ */
+
+/* hidden: El contenido que desborda el 
+contenedor se recorta y no se muestra.
+ */
+#hidden {
+    overflow: hidden;
+}
+
+/* scroll: Se muestran barras de 
+desplazamiento para permitir la 
+visualización del contenido que desborda el 
+contenedor. */
+#scroll{
+    overflow: scroll;
+}
+
+/* auto: Si el contenido desborda el 
+contenedor, se muestran barras de 
+desplazamiento. Si no lo hace, el contenido 
+se muestra normalmente. */
+
+/* //////////////////////////////////// */
+/* BOX-MODEL */
+
+/* La propiedad padding se utiliza para agregar 
+espacio dentro de un elemento, entre su contenido 
+y su borde. Es decir, el padding es el espacio que 
+hay entre el borde del elemento y su contenido. La 
+propiedad padding puede ser establecida en 
+valores individuales para cada uno de los cuatro 
+lados (padding-top, padding-right, 
+padding-bottom y padding-left) o puede ser 
+establecida en un solo valor que se aplicará a 
+todos los lados al mismo tiempo. */
+
+#padding{
+    /* padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px; */
+
+            /*arriba derecha abajo izquierda  */
+    /* padding: 20px 30px 40px 50px; */
+
+    /* con dos valores:  arriba y abajo 20px, a los costados 50px*/
+    padding: 20px 50px;
+}
+
+/* La propiedad border se utiliza para establecer el 
+borde de un elemento. Un borde puede ser de diferentes estilos (como sólido, punteado, etc.), 
+colores y anchuras. La propiedad border puede ser 
+establecida en valores individuales para cada uno 
+de los cuatro lados (border-top, border-right, 
+border-bottom y border-left) o puede ser 
+establecida en un solo valor que se aplicará a 
+todos los lados al mismo tiempo */
+
+#border{
+border-top:  5px dashed black;
+border-radius: 10px;
+}
+
+/* En cuanto border tenemos varias propiedades que los componen entre ellas:
+
+* border-style: Esta propiedad define el estilo del borde. Hay varios valores que se pueden utilizar para establecer diferentes estilos de borde, como 
+solid, dashed, dotted, double, groove, ridge, inset, outset, entre otros.
+
+* border-width: Esta propiedad define el ancho del borde. Los valores posibles son cualquier valor numérico, en píxeles, em, rem, etc.
+
+* border-color: Esta propiedad define el color del borde. Los valores posibles son cualquier valor de color válido en CSS, como un nombre de color, un valor hexadecimal o una función rgb().
+
+* border-radius: Esta propiedad define el radio de la esquina del borde. Los valores posibles son cualquier valor numérico, en píxeles, em, rem, etc. */
+
+/* /////////////////////////////////////// */
+
+/* La propiedad margin se utiliza para establecer el espacio en blanco entre los bordes de un elemento y los elementos adyacentes. Es decir, el margin es el espacio en blanco que hay fuera del borde del elemento. La propiedad margin puede ser establecida en valores individuales para cada uno de los cuatro lados (margin-top, margin-right, margin-bottom y margin-left) o puede ser establecida en un solo valor que se aplicará a todos los lados al mismo tiempo */
+
+#margin{
+    /* margin-left: 30px;
+    margin-top: 50px; */
+
+    /* margin: 50px 60px 80px 90px; */
+
+    margin: auto; /* no es lo mas recomendable */
+}
+
+img{
+    width: 400px;
+    border-radius: 50%;
+}
