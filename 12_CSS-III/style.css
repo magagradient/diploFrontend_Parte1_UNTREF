@@ -23,7 +23,7 @@ contenedor se recorta y no se muestra.
 desplazamiento para permitir la 
 visualización del contenido que desborda el 
 contenedor. */
-#scroll{
+#scroll {
     overflow: scroll;
 }
 
@@ -46,13 +46,13 @@ padding-bottom y padding-left) o puede ser
 establecida en un solo valor que se aplicará a 
 todos los lados al mismo tiempo. */
 
-#padding{
+#padding {
     /* padding-left: 20px;
     padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 40px; */
 
-            /*arriba derecha abajo izquierda  */
+    /*arriba derecha abajo izquierda  */
     /* padding: 20px 30px 40px 50px; */
 
     /* con dos valores:  arriba y abajo 20px, a los costados 50px*/
@@ -68,9 +68,9 @@ border-bottom y border-left) o puede ser
 establecida en un solo valor que se aplicará a 
 todos los lados al mismo tiempo */
 
-#border{
-border-top:  5px dashed black;
-border-radius: 10px;
+#border {
+    border-top: 5px dashed black;
+    border-radius: 10px;
 }
 
 /* En cuanto border tenemos varias propiedades que los componen entre ellas:
@@ -88,16 +88,89 @@ solid, dashed, dotted, double, groove, ridge, inset, outset, entre otros.
 
 /* La propiedad margin se utiliza para establecer el espacio en blanco entre los bordes de un elemento y los elementos adyacentes. Es decir, el margin es el espacio en blanco que hay fuera del borde del elemento. La propiedad margin puede ser establecida en valores individuales para cada uno de los cuatro lados (margin-top, margin-right, margin-bottom y margin-left) o puede ser establecida en un solo valor que se aplicará a todos los lados al mismo tiempo */
 
-#margin{
+#margin {
     /* margin-left: 30px;
     margin-top: 50px; */
 
     /* margin: 50px 60px 80px 90px; */
 
-    margin: auto; /* no es lo mas recomendable */
+    margin: auto;
+    /* no es lo mas recomendable */
 }
 
-img{
+img {
     width: 400px;
     border-radius: 50%;
+    box-shadow: 10px 10px 10px 15px blue;
 }
+
+/* //////////////////////////////////// */
+/* BOX-SHADOW */
+
+/* es una propiedad de CSS que permite añadir sombras a un elemento HTML. Esta 
+sombra puede ser utilizada para dar la apariencia de elevación del elemento sobre el 
+fondo o para crear un efecto tridimensional en la página web. Sus propiedades son:
+
+* [horizontal offset]: La distancia en píxeles que se desea que la sombra esté 
+desplazada hacia la derecha o hacia la izquierda. Un valor positivo desplaza la sombra 
+hacia la derecha, mientras que un valor negativo desplaza la sombra hacia la izquierda.
+
+* [vertical offset]: La distancia en píxeles que se desea que la sombra esté desplazada 
+hacia abajo o hacia arriba. Un valor positivo desplaza la sombra hacia abajo, mientras 
+que un valor negativo desplaza la sombra hacia arriba.
+
+* [blur radius]: La cantidad de desenfoque que se desea aplicar a la sombra. Cuanto 
+mayor sea el valor, más difusa será la sombra. Un valor de 0 no aplicará ningún 
+desenfoque.
+
+* [spread radius]: La cantidad de expansión o contracción que se desea aplicar a la 
+sombra. Si se establece un valor positivo, la sombra se expandirá en todas las 
+direcciones. Si se establece un valor negativo, la sombra se contraerá en todas las 
+direcciones. Un valor de 0 no aplicará ninguna expansión o contracción.
+
+*[color]: El color de la sombra. */
+
+button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 3px 10px blueviolet;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
+/* //////////////////////////////////// */
+/* DISPLAY */
+
+/* La propiedad CSS display define si uno o más elementos HTML deben ser visualizados como un elemento de bloque (block), o como un elemento lineal (inline). */
+
+.inline{
+    display: inline;
+}
+
+.display{
+    display: none;
+}
+
+/* //////////////////////////////////// */
+/* VISIBILITY */
+
+/* Además de contar con la propiedad display, CSS también cuenta con la propiedad visibility. La misma ofrece una serie de herramientas para manejar la visibilidad de los elementos HTML, que difieren ligeramente del uso de la primera. */
+
+/* 
+* / collapse / Colapsa el elemento, llevando a 0 (cero), el valor de su alto (height). Funciona de 
+manera similar a display: none;
+
+* / hidden / El elemento HTML se oculta de la pantalla aunque sigue manteniendo, en el documento HTML, el espacio que ocupa su contorno.
+
+* / visible / El elemento HTML se visualiza de forma normal. */
+
+.vhidden{
+    visibility: hidden;
+}
+
+/* deje a la hora y 35 minutos */
