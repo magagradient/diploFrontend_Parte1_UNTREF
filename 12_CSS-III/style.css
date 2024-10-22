@@ -173,4 +173,56 @@ manera similar a display: none;
     visibility: hidden;
 }
 
-/* deje a la hora y 35 minutos */
+/* //////////////////////////////////// */
+/* Posicionamiento de elementos */
+
+/* CSS cuenta también con una propiedad denominada position, la cual permite definir en qué lugar posicionamos un elemento HTML dentro del documento homónimo. */
+
+/* {estándar} */
+
+/* {relativo} */
+/* Posicionar un elemento de manera relativa, es indicarle a la propiedad position que tenga el valor relative. A su vez, las propiedades top y bottom permiten definir el desplazamiento vertical del elemento, y las propiedades left y right definen el desplazamiento horizontal del elemento. */
+
+/* #pRelative{
+    position: relative;
+    left: 50px;
+    top: 100px;
+} */
+
+/* {absoluto} */
+/* Posicionar un elemento de manera absoluta, es indicarle a la propiedad position que tenga el valor absolute o fixed. Las propiedades top, bottom, right, left definen el desplazamiento entre los bordes del bloque contenedor del elemento. Si el elemento tiene márgenes, se agregan al 
+desplazamiento. */
+
+/* #pAbsoluta{
+    position: absolute;
+    right: 1px;
+    bottom: 25px;
+    background-color: lightblue;
+} */
+
+.pAbsoluta{
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+}
+
+#pRelative{
+    position: relative;
+}
+
+/* {fijo} */
+/* Posicionar un elemento de manera fija, es definir la propiedad position con el valor sticky. El 
+elemento es tratado como un elemento posicionado de forma relativa hasta que su bloque 
+contenedor cruza un límite establecido dentro del flujo principal desde el cual se lo interpreta 
+como “fijo”, hasta alcanzar el borde opuesto de su bloque contenedor. */
+
+header{
+    background-color: coral;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+}
+
