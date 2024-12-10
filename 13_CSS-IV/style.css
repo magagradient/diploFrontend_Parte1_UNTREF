@@ -1,0 +1,294 @@
+.box {
+    width: 100%;
+    border: 1px solid red;
+    padding: 20px;
+}
+
+.title{
+    text-align: center;
+}
+
+/*---------------- Pseudo-clases ----------------*/
+
+/* La pseudo clase se debe referenciar mediante dos puntos, seguido del nombre de la pseudo-clase, justo a continuación 
+del elemento HTML o de la clase CSS donde queremos aplicarla. */
+
+/* Podemos definir una pseudo-clase CSS tanto sobre una clase 
+CSS previa, o directamente sobre un elemento HTML.
+Si optamos por esto último, tengamos presente que se aplicarán los estilos de esta pseudo-clase a todos los elementos HTML del documento homónimo. */
+
+/*---------------- Hipervínculos ----------------*/
+
+/*los hipervínculos HTML poseen diferentes estilos predeterminados que se activan cuando pasamos el cursor 
+sobre estos, cuando hacemos clic, y cuando visualizamos 
+nuevamente un hipervínculo sin visitar, y uno visitado.
+
+Las pseudo-clases CSS nos permiten modificar los estilos 
+predeterminados de estos hipervínculos, haciendo uso de las 
+mismas. Estas son:
+● active
+● link
+● visited
+● hover */
+
+/* La pseudo-clase :active permite establecer el color del hipervínculo cuando el mismo recibe un clic por parte del usuario: */
+#active:active{
+    color: green;
+    background-color: red;
+}
+
+/* La pseudo-clase :link permite establecer el color del hipervínculo predeterminado el cual aún no fue visitado */
+#link:link{
+    background-color: aqua;
+}
+
+/* la pseudo-clase :hover, el color de este cuando posicionamos el mouse sobre el mismo */
+#hover:hover{
+    background-color: black;
+    color: yellow;
+    text-decoration: none;
+}
+
+/* La pseudo-clase :visited permite establecer el color del hipervínculo una vez que hayamos visitado el mismo. Así le indicamos al usuario que dicho hipervínculo ya fue visitado por él. */
+#visited:visited{
+    color: red;
+}
+
+
+/*----------- Elementos de un contenedor -----------*/
+
+/* Las pseudo-clases first-child y last-child, permiten que apliquemos estilos predeterminados a los elementos de un contenedor HTML. Estos se aplican al primer elemento del contenedor, o al último, respectivamente. */
+
+a:hover{
+    background-color: lightcoral;
+}
+
+/* Si por ejemplo, tenemos un menú HTML contenido dentro de un <div>, y queremos resaltar el primero de sus elementos con otro color, podemos recurrir al pseudo-elemento first-child. */
+#box1 h2:first-child{
+    color: red;
+}
+
+/* darle estilos al ultimo elemento */
+#box1 a:last-child{
+    text-decoration: none;
+    color: black;
+}
+
+/* Y si tenemos un contenedor HTML con diferentes elementos, 
+y queremos aplicar un estilo al primero o último elemento de 
+un tipo específico, contamos para ello con las pseudo-clases 
+first-of-type y last-of-type. */
+#box2 h2:first-of-type{
+    background-color: yellow;
+}
+
+#box2 h2:last-of-type{
+    background-color: tomato;
+}
+
+/* Para aquellos casos donde tengamos que seleccionar un elemento específico de un listado dentro de un contenedor, podemos aplicar la pseudo-clase nth-child(). 
+Esta se comporta como una función, por lo tanto espera que 
+agreguemos un paréntesis a la misma.
+
+En este caso, dentro del paréntesis de la función nth-child(), 
+debemos definir el número de elemento al cual le deseamos 
+aplicar el estilo CSS definido.
+
+De esta forma, CSS intercepta el elemento hijo de dicho contenedor, por su número de posición, sin importar qué tipo de elemento sea el mismo.*/
+#box2 h2:nth-child(2){
+    background-color: violet;
+    color: white;
+}
+
+/* :nth-last-child también espera un número para seleccionar un elemento pero, en este caso, lo hará a partir del último elemento de la lista. */
+#box2 p:nth-last-child(2){
+    color: green;
+}
+
+/* Partimos de una tabla específica, en la cual deseamos 
+aplicar un estilo de fondo específico para destacar los 
+elementos pares de los impares.
+Para ello, reemplazamos el parámetro numérico de nth-child() por los valores odd ó even, respectivamente. */
+ul > li:nth-last-child(even){
+    list-style: none;
+    color: red;
+}
+/* ul > li:nth-of-type() */
+
+
+/* En el caso que necesitemos aplicar un estilo CSS sobre 
+un elemento de un contenedor, pero solo si este es el único elemento allí, entonces podemos recurrir a la pseudo-clase :only-child.
+
+De igual forma pasa con la pseudo clase :only-of-type. La misma estará vigente mientras un tipo de elemento HTML dentro de un contenedor, sea único respecto al resto de los elementos HTML allí ubicados. */
+#box3 h2:only-of-type{
+    color: violet;
+}
+
+/*---------------- Formularios ----------------*/
+
+/* Los elementos HTML de un formulario también poseen una 
+serie de pseudo-clases que nos permiten controlar diversos 
+estados en el mismo.
+Entre estas, podemos mencionar a:
+● focus
+● disabled
+● valid - invalid
+● required
+● in-range - out-of-range */
+
+
+/* para el campo que recibe el foco del cursor, también podemos distinguirlo del resto aplicándole un estilo CSS que lo identifique rápidamente:*/
+#focus:focus{
+    background-color: blue;
+    height: 50px;
+    border: 8px dotted green;
+}
+
+/* Si tenemos campos del formulario deshabilitados por defecto, podemos aplicarle un estilo CSS predeterminado, más allá del estándar que el navegador web le aplique. */
+#disabled:disabled{
+    border: none;
+    outline: none;
+    background-color: brown;
+}
+
+/*  podemos validar si el dato ingresado es o no correcto, destacando con un estilo CSS específico al input o inputs en 
+cuestión, utilizando la pseudo-clase :valid.*/
+#valid:valid{
+border: 2px solid lightgreen;
+}
+
+/*  si queremos distinguir al input type con un estilo específico, cuando el dato ingresado en un input es incorrecto, recurrimos a la pseudo-clase :invalid.
+ */
+#valid:invalid{
+    border: 10px solid red;
+}
+input{
+    outline: none;
+}
+
+/* si queremos distinguir aquellos campos que necesitan que se ingrese 
+información sí o sí, podemos recurrir a la pseudo-clase :required */
+.required:required{
+    border: 2px solid blue;
+}
+
+/*---------------- Transformaciones ----------------*/
+
+/* En CSS, se considera una “transformación” a la modificación de la forma de un elemento. Todo elemento transformado, NO cambia el lugar que ocupa, sino solamente su forma. Algunas cosas que se pueden lograr, son:
+● Movimiento del elemento
+● Escalar su tamaño
+● Voltear y girar el elemento
+● Cambiar su perspectiva */
+
+.boxItem{
+    width: 50px;
+    height: 50px;
+    border: 1px solid blue;
+    background-color: transparent;
+    transition: height 1s, backgorund-color 1s, width 1s;
+}
+
+/* transform:translate() cambia la ubicación del elemento. 
+Trabaja con dos números y unidades, separados por una “, ”, y acepta valores positivos y negativos:
+● El primero refiere al eje X. Si su valor es 
+positivo se mueve a la derecha y si es 
+negativo a la izquierda
+● El segundo refiere al eje Y. Si su valor es 
+positivo se mueve abajo y si es negativo 
+mueve el elemento arriba */
+#translate{
+    transform: translate(50px, 80px);
+}
+
+/* transform:rotate() rota los elementos sobre su propio eje. Utiliza una medida llamada deg la cual hace referencia a grados, por lo tanto, su valor máximo es 360º.
+El elemento puede rotar tanto en el eje X, como en el eje Y y sobre el eje Z */
+#rotate{
+    transform: rotate(60deg);
+}
+
+/* transform:scale() cambia la escala de los objetos. Al igual que translate, acepta dos valores numéricos separados por una coma.
+● El primero refiere al ancho (Escala en X)
+● El segundo refiere a largo (Escala en Y)
+● Si el valor es mayor a 1, aumenta el tamaño
+● Si el valor está entre 0 y 1 (Ej: 0.2, disminuye el tamaño) */
+#scale > img:hover{
+    transform: scale(0.5, 1.3);
+}
+
+/* transform:skew() se utiliza para deformar los elementos, torciendolos. Acepta dos números separados por una coma y la medida utilizada en este caso es deg,ya que el elemento se tuerce en direcciones angulares.
+● El primer término especifica el eje X
+● El segundo término especifica el eje Y */
+#skew{
+    transform: skew(40deg, 60deg);
+}
+
+/* Con la propiedad transition es posible lograr que, al pasar el mouse por un elemento, el mismo haga una animación. Para ello, debemos aplicarla trabajandocon la pseudoclase :hover.
+Los tipos de transition disponibles, son:
+● transition-delay
+● transition-duration
+● transition-property */
+#transition:hover{
+    height: 80px;
+    /* background-color: lightgreen; */
+    background: url('https://placekitten.com/200/200');
+    width: 300px;
+}
+
+
+/*---------------- Animaciones ----------------*/
+
+/* A diferencia de la transición, una animación es un efecto que se repite tantas veces como se indique. Para eso debemos definir su apariencia. Esto se  hace estableciendo fotogramas, a través de la regla @keyframe. Un @keyframe, siempre inicia en estado porcentual 0% o inicial, y llega hasta el 100% o final.
+Entre estos lapsos, podemos hacer breakpoints, para que la animación, sufra diferentes cambios */
+
+/* Otra de las maneras de declarar un @keyframe es a través de las palabras reservadas From(desde) y to (hasta). 
+Tomando como referencia el estado inicial en 0 para from, y en to, su estado final, o 100%. */
+
+@keyframes example-animation {
+    from{
+        width: 100px;
+        background-color: yellow;
+    }to{
+        width: 200px;
+        background-color: blue;
+    }
+}
+
+@keyframes example-animation {
+    0%{
+        width: 100px;
+        background-color: yellow;
+    }
+    20%{
+        transform: rotate(40deg);
+        background-color: green;
+
+    }
+    40%{
+        transform: scale(1.3);
+        background-color: lawngreen;
+
+    }
+    60%{
+        width: 200px;
+        background-color: blue;
+    }
+    80%{
+        width: 80px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+
+/* Si nos ponemos a analizar el css declarativo, veremos que las animaciones también trabajan con varias propiedades. Por ello, es fundamental saber que la propiedad disparadora del @keyframe es la propiedad animation-name.
+● Para que repita infinitamente: animation-iteration-count.
+● Tiempo de la animación: animation-time-function.
+● Tiempo de la duración: animation-duration.
+● Delay pre-ejecución: animation-delay.
+● Pausar y reanudar la animación animation-play-state. */
+
+#animation{
+    animation-name:example-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
