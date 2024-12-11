@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+body{
+    background-color: lightblue;
+}
+
+
+/* Grid-template-area */
+/* Esta propiedad nos permite, determinando la cantidad 
+de filas y columnas, posicionar los elementos de manera rápida, simplemente llamandolas.
+
+Cada apertura y cierre de comillas determina una fila y, cada palabra aplicada, el área o columna que va a ocupar. Grids toma la palabra reservada none o, un simple punto, como un espacio vacío.*/
+.layout{
+    padding: 10px;
+    margin: 50px auto;
+    width: 80%;
+    height: 100vh;
+    background-color: lightcoral;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: 15% 30% 30% 25%;
+    grid-template-areas: 
+        "header header header header header header"
+        "aside aside section1 section1 section1 section1"
+        "aside aside section2 section2 section3 section3"
+        "footer footer footer footer footer footer"
+    ;
+    gap: 10px;
+    
+}
+
+/* grid-area */
+/* Con esta propiedad, nosotros podemos indicar que item hijo del contenedor, va a ocupar esa área determinada en el grid-template-área. */
+
+/* Los valores posibles para esta propiedad, son:
+● grid-row-start
+● grid-column-start
+● grid-row-end
+● grid-column-end */
+.header{
+    width: 100%;
+    background-color: lightgreen;
+    /* grid-column: 1 / span 6; */
+    grid-area: header;
+}
+
+.aside{
+    background-color: lightcyan;
+    grid-area: aside;
+    /* grid-column: 1 / 3;
+    grid-row: 2 / 4; */
+}
+
+.section1, .section2, .section3{
+    background-color: lightseagreen;
+    border: 1px solid black;
+}
+
+.section1{
+    /* grid-column: 3 / 7; */
+    grid-area: section1;
+}
+
+.section2{
+    /* grid-column: 3 / 5; */
+    grid-area: section2;
+
+}
+
+.section3{
+    /* grid-column: 5 / 7; */
+    grid-area: section3;
+
+}
+
+
+.footer{
+    background-color: lightgoldenrodyellow;
+    /* grid-column: 1 / span 6;
+    grid-row: 4 / 5; */
+    grid-area: footer;
+
+}
