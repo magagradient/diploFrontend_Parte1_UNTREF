@@ -1,0 +1,29 @@
+/*------------------ Flexbox ------------------*/
+
+/* El primer paso para comenzar a utilizar Flexbox, es aprovechar la 
+propiedad display, seteando la misma con el valor flex */
+
+/* El valor de flex-direction puede ser row, si queremos definir la dirección en forma de fila, o también puede ser column, si el ordenamiento de los elementos queremos que sea encolumnado.*/
+
+/* Flexbox se comporta de forma predeterminada en lo que refiere a posicionamiento horizontal, manteniendo todos los componentes alineados
+de la mejor forma posible. Para lograrlo, utiliza una propiedad denominada 
+flex-wrap. */
+
+.boxFlex {
+    border: 1px solid red; /* Borde rojo de 1px sólido para toda la caja */
+    width: 100%; /* Ancho de la caja ajustado al 100% del contenedor */
+    height: 100vh; /* Altura de la caja igual a la altura completa de la ventana */
+    display: flex; /* Define un contenedor flexible */
+    flex-direction: row; /* Los elementos internos se alinean en fila (horizontalmente) */
+    align-items: flex-start; /* Alinea los elementos al inicio del eje transversal (arriba) */
+    justify-content: space-around; /* Espacio igual entre elementos, con margen a los lados */
+    flex-wrap: wrap; /* reposiciona elementos */
+    background-color: lightblue; /* Fondo azul claro para la caja */
+    padding: 10px; /* Espaciado interno de 10px */
+}
+
+.itemFlex {
+    width: 170px; /* Ancho fijo de 170px para cada elemento */
+    height: 170px; /* Altura fija de 170px para cada elemento */
+    border: 1px solid blue; /* Borde azul de 1px sólido */
+}
