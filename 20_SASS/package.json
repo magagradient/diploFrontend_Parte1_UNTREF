@@ -1,0 +1,19 @@
+{
+  "name": "20_sass",
+  "version": "1.0.0",
+  "description": "prueba de sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "html",
+    "css"
+  ],
+  "author": "@magaguerzo",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}
